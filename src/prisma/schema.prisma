@@ -6,3 +6,14 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
+
+model News {
+  id          Int    @id @default(autoincrement())
+  title       String
+  description String
+  date        Int
+  platform    String
+  author      String
+  ticker      String
+  sentiment   Int
+}
